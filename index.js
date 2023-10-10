@@ -8,7 +8,7 @@ const { argsErrorMes, argsExampleMes, moveErrorMes } = require("./errorMes");
 
 const moves = Array.from(new Set(process.argv.slice(2)));
 const movesLen = moves.length;
-const isValidArgs = moves && movesLen % 2 !== 0;
+const isValidArgs = moves && movesLen > 2 && movesLen % 2 !== 0;
 let gameCounter = 1;
 
 const rl = readline.promises.createInterface({
